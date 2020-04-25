@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name = "author" content = "Anaïs">
+		<meta charset = "utf-8"/>
+		<link rel="stylesheet" href="LCR-video_style.css" />
+		<link rel="shortcut icon" type="image/png" href="img/LCR_logo_blanc.png"/>
+	
+		<title>L.C.R Video | Réalisation de contenu audiovisuel</title>
+
+		<script type="text/javascript">
+			var scrollY = 0;
+			var distance = 40;
+			var speed = 15;
+
+			function autoScrollTo(el){
+				var currentY = window.pageYOffset;
+				var targetY = document.getElementById(el).offsetTop;
+				var bodyHeight = document.body.offsetHeight;
+				var yPos = currentY + window.innerHeight;
+				var animator = setTimeout('autoScrollTo(\''+el+'\')', speed);
+
+				if(currentY > targetY) {
+						scrollY = currentY-distance;
+						window.scroll(0, scrollY);
+					} else if(yPos > bodyHeight) {
+					clearTimeout(animator);
+				} else {
+					if(currentY < targetY-distance) {
+						scrollY = currentY+distance;
+						window.scroll(0, scrollY);
+					} else {
+						clearTimeout(animator);
+					}
+				}
+			}
+
+			function resetScroller(el){
+				var currentY = window.pageYOffset;
+				var targetY = document.getElementById(el).offsetTop;
+				var animator = setTimeout('resetScroller(\''+el+'\')', 10);
+
+				if(currentY > targetY) {
+						scrollY = currentY-distance;
+						window.scroll(0, scrollY);
+					} else {
+						clearTimeout(animator);
+					}
+			}
+
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<header id="accueil">
+															<!-- Menu -->
+
+			<nav>
+				<ul>
+					<li><a href="#" onclick="return false;" onmousedown="resetScroller('accueil');">ACCUEIL</a></li>
+					<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('portfolio');">PORTFOLIO</a></li>
+					<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('presentation');">A PROPOS</a></li>
+					<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('contact');">DEVIS & CONTACT</a></li>
+				</ul>
+			</nav>
+
+
+		</header>
+
+
+
+
+															<!-- Accueil -->
+
+			<div class="accueil-bloc">
+
+				<video id="videoBackground" loop autoplay playsinline muted >
+					<source type="video/mp4" src="https://lcr-video.com/wp-content/uploads/2018/10/mix.mp4" alt="Video de fond" width="100%" />	
+				</video>
+	
+				<div id="contenuAccueil">
+					<p><img src="img/LCR_logo_blanc.png" alt="LCR Video logo" width="400px"/></p>
+					<p><a href="#" onclick="return false;" onmousedown="autoScrollTo('portfolio');"><img class="fleche" src="img/triangle5.png" alt="fleche" width="30px"/></a></p>
+				</div>	
+	
+			</div>
+
+		<div class="contenu-site">
+
+		<a href="#" onclick="return false;" onmousedown="resetScroller('accueil');">
+			<img id="haut-page" src="img/retour-haut.png" alt="Haut_page" width="40px"/></a>
+
+
+															<!--Portfolio-->
+
+
+
+			<section id="portfolio">
+
+				<h2>Portfolio</h2>
+
+				<ul class="portfolio-flex">
+
+					<li class="colonne1">
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/367453843" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Titans Fall Harder &#8211; Laser Induced Obscurity</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+				
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/361178928" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Armée Noire &#8211; M20</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/390860863" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Rose &#8211; Aeternum</h4>
+							<p>J&#8217;ai écrit · monté · étalonné ce projet.</p>
+						</div>
+						
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/299556344" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Malfoy &#8211; Foufou tu jactes</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/299570095" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Events] Le mondial du tatouage 2018</h4>
+							<p>J&#8217;ai réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/301485209" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Mariage] Laurène et Florian</h4>
+							<p>J&#8217;ai réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+					</li> <!-- Fin colonne 1 -->
+
+
+					<li class="colonne2">
+				
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/390847042" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Armée Noire &#8211; ADN</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/390854987" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] RASH &#8211; Caviar</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/317375814" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Armée Noire &#8211; John Dee</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/317380573" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Skodri &#8211; Bif</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/301488860" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Live] Alex Cordo &#8211; Live</h4>
+							<p>J&#8217;ai réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">						
+							<iframe src="https://player.vimeo.com/video/301487123" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Bromaz &#8211; Nuit</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+					</li> <!-- Fin colonne 2 -->
+
+
+					<li class="colonne3">
+				
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/361181771" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Mode] Blossom &#8211; Il pleut sur Seoul</h4>
+							<p>J&#8217;ai réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/330299661" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] ANNA &#8211; Vicious Circle</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/317378365" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Ozai ft. Bilmo &#8211; Foudroyé</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/299559820" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Grimoire &#8211; Complex</h4>
+							<p>J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/301490779" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Freestyle] Kessan &#8211; GTD</h4>
+							<p>J&#8217;ai réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+						<div class="video">
+							<iframe src="https://player.vimeo.com/video/299478028" width="450" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<h4>[Clip] Ozai &#8211; Minuit</h4>
+							<p id="presentation">J&#8217;ai écrit · réalisé · monté · étalonné ce projet.</p>
+						</div>
+
+					</li> <!-- Fin colonne 3 -->
+
+				</ul>
+
+			</section>
+
+
+
+															<!--Présentation-->
+
+
+			<section class = "presentation" >
+
+				<ul class="presentation-flex">		
+
+					<li class="presentation-bloc" id="presentation-bloc-1"><h2 class="presentationTitre">Yannis V.</h2>
+						<h3 class = "presentationTitre">Réalisateur / Monteur / Etalonneur</h3>
+						<p><br/><br/>Réalisateur et monteur vidéo depuis 2016, je propose mes services de vidéaste pour tout type de contenu, qu’il s’agisse du clip musical sombre, singulier et atypique, ou encore d’un support professionnel plus sobre, épuré et minimaliste.</p>
+						<p>Passionné par mon métier et soucieux du moindre détail, la qualité de mes productions est pour moi une priorité ainsi que la satisfaction de mon exigeante clientèle.</p>
+						<p>Afin de réaliser votre projet, je ferai en sorte d’évaluer au mieux vos attentes et de vous faire une suggestion personnalisée, pour un résultat professionnel au plus proche de votre identité.  </p>
+					</li>
+
+					<li class="presentation-bloc">
+						<p><img src="img/Presentation-Yannis.jpg" alt="Image de présentation Yannis" width="430px" class="imgYannis"/></p>
+					</li>
+
+				</ul>
+
+			</section>
+
+			
+
+															 <!-- Contact -->
+
+			<section id="contact">
+
+				<div class="contact-contenu">
+
+					<h2>Contact</h2>
+					<br/>
+					<p class="coordonnees">Valence 26000 – Lyon 69002, France</p>
+					<p class="coordonnees">Tel : 06 77 52 10 36    |  yannis@lcr-video.com</p>
+					<p><img src="img/LCR-contact.png" alt="logos_reseaux_sociaux" width="200px" usemap="#reseaux_sociaux"></p>
+						<map name="reseaux_sociaux">
+  							<area shape="circle" coords="15, 25, 15" alt="telephone" href="tel:+33677521036">
+
+ 							<area shape="circle" coords="72, 25, 15" alt="instagram" href="https://www.instagram.com/yannislcr/">
+
+  							<area shape="circle" coords="128, 25, 15" alt="vimeo" href="https://vimeo.com/user90211483?fbclid=IwAR2dOk7VNUSMR8lLEwaxQjLERwHsNVotAX0sfXhwXu2IbuIvl04_Lvspflg">
+
+  							<area shape="circle" coords="184, 25, 15" alt="facebook" href="https://www.facebook.com/lcrvideo">
+						</map>
+
+
+															<!-- Formulaire de contact --> 
+
+
+					<form method="get" action="traitement.php">
+
+						<p>
+							<input type="text" name="nom" id="nom" placeholder="Nom / Société" required="required"/>
+							<input type="email" name="email" id="email" placeholder="Adresse mail" required="required"/>
+						</p>							
+				
+						<p>
+							<input type="text" name="cp" id="cp" placeholder="Code postal" lenght="5" required="required"/>													
+							<input type="tel" name="tel" id="tel" placeholder="Portable"/>
+						</p>
+				
+						<p>
+							<input type="url" name="web" id="web" placeholder="Page web (facultatif)"/>
+						</p>
+								
+						<fieldset id="typeClip">
+							<legend>Votre demande concerne</legend>
+							<p class="contactField">
+								<input type="radio" name="typeDemande" value="clip" checked/> 
+								<label for="clip">Clip</label>
+								<input type="radio" name="typeDemande" value="mode"/> 
+								<label for="mode">Mode</label>
+								<input type="radio" name="typeDemande" value="corporate"/> 
+								<label for="corporate">Corporate / Entreprise</label>
+								<input type="radio" name="typeDemande" value="pub"/> 
+								<label for="pub">Publicité</label>
+								<input type="radio" name="typeDemande" value="mariage"/> 
+								<label for="mariage">Mariage</label>
+								<input type="radio" name="typeDemande" value="autre"/> 
+								<label for="autre">Autre demande</label>
+							</p>
+						</fieldset>	
+					
+						<p><textarea name="message" id="message" placeholder="Message" required="required"></textarea></p>
+
+						<p><button class="submit" type="submit" name="envoyer" ><span>   ENVOYER</span></button></p> 					
+
+					</form>
+		
+				</div>
+
+			</section>
+
+
+		</div>
+
+
+
+																<!-- Footer-->
+		<footer>
+
+			<ul class="footer-grid">
+	
+				<li class="footer-bloc">
+					<h2>Yannis Volle | L.C.R vidéo </h2><br/>
+					<p>55 rue Le sentier<br/>					
+					26750 GENISSIEUX</p>
+					<br/>	
+					<p>06 77 52 10 36<br/>
+					yannis@lcr-video.com</p>
+				</li>
+
+				<li class="footer-bloc">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>					
+					<br/>
+					<br/>
+					<br/>					
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<p class="footer-centre">2020 Copyright – L.C.R vidéo by Anaïs Rouvière</p>
+				</li>				
+
+				<li class="footer-bloc">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<p class="footer-droite">SIRET : 82984237600016</p>
+				</li>
+
+			</ul>
+						
+
+		</footer>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript" src="script/jquery.parallax-1.1.js"></script>
+
+		<script type="text/javascript">	
+			$(document).ready(function(){		
+	   		$('.presentation').parallax("center", 0, 0.1, true);
+	   		$('#contact').parallax("center", 500, 0.5, true);})
+		</script>
+
+	</body>
+
+</html>
