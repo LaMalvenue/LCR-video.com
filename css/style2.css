@@ -1,0 +1,373 @@
+
+/* import fonts from fonts.css file */ 
+@import url(./fonts.css);
+
+
+/* css variables */ 
+@import url(./partials/_variables.css);
+
+/* import global styling */ 
+@import url(./partials/_global.css);
+
+
+/* start navigation */ 
+
+.header_area{
+    position: relative;
+}
+
+.black-background{
+    position: absolute;
+    min-width: 100%;
+    min-height:100vh;
+    background: black;
+    z-index: -899;
+}
+
+#videoBackground {
+    position: absolute;
+    max-width: 100%;
+    min-height:100vh;
+    background: black;
+    z-index: -999;
+}
+
+.header_area .main-menu .navbar .navbar-brand{
+    padding-left: 2rem ;
+    margin-top: -30px;
+}
+
+.header_area .main-menu .navbar{
+    position:fixed;
+    top:0; right:0;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: right;
+    padding-top: 28px; padding-bottom: 0; padding-right: 0;
+    width:100%;
+
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+}
+
+.header_area .main-menu .nav-item .nav-link{
+    font: normal 300 0.8em/2px var(--neoteric);
+    text-transform: uppercase;
+    padding-left: 0.2rem;
+    padding-right: 2rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.header_area .main-menu .navbar-nav .active a{
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+    background-clip: text;
+}
+
+.header_area .main-menu .navbar-nav a:hover{
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+    background-clip: text;
+}
+
+
+/* end navigation */ 
+
+/* Banner Area */ 
+
+.site-main .site-banner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+}
+
+.site-main .site-banner .container .row{
+    background-color:magenta;
+}
+
+.site-main .site-banner .site-buttons {
+    margin:auto;
+    padding-top: 2rem;
+}
+
+.fleche {
+    position: absolute;
+    bottom: 2rem;
+    align-self: center;
+    margin-left: calc(50% - 13px);
+}
+
+.logo {
+    padding-top: 3rem;
+    margin:auto;
+    align-self: center;
+}
+
+/* End Banner Area */ 
+
+/* Project Area */ 
+
+
+.site-main .project-area .services-title{
+    padding: 0 14rem;
+}
+
+.site-main .project-area  h1{
+    font-size: 35px;
+}
+
+.site-main .project-area{
+    padding: 4rem 0;
+    background: white;
+}
+
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 16px/130px var(--roboto);
+    text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button + button{
+    padding-left: 2rem;
+}
+
+.site-main .project-area .grid .our-project > .title h4{
+    font: normal 600 20px/12px var(--roboto);
+}
+
+.site-main .project-area .grid .our-project p{
+    margin-top: -0.2rem;
+}
+
+.site-main .project-area .grid .our-project .img a:hover img{
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+
+
+/* End Project Area */ 
+
+
+/* Start About Area */ 
+
+.site-main .about-area{
+    padding: 8rem 5rem;
+    background-color: black;
+    color:white;
+}
+
+.espace{
+    height:2rem;
+}
+
+.site-main .about-area .about-title h2 {
+    text-align: center;
+    font-family: Neoteric, Calibri, "Trebuchet Sans MS", sans-serif;
+    font-size: 2.5em;
+
+    font-weight: 150;
+}
+
+.site-main .about-area .about-title h3 {
+    text-align: center;
+    font-family: 'Roboto-Bold', Calibri, "Trebuchet Sans MS", sans-serif;
+    color : gray;
+    font-size: 1.1em;
+    text-transform: uppercase;  
+    padding-bottom: 3rem;
+}
+
+.site-main .about-area .about-title .paragraph > p{
+    padding: .4rem 0;
+    text-align: justify;
+}
+
+/* End About Area */ 
+
+
+/* Services Area */ 
+
+#services {
+    padding: 2rem;
+    background: white;
+}
+
+#services .container {
+    margin-top: 2rem;
+}
+
+#services .container .services-list {
+    margin-top: -2rem;
+}
+
+.site-main .services-area .services-title h1{
+    font-size: 35px;
+}
+
+.site-main .services-area .services-title strong{
+    font-size: 1.1em;
+}
+
+.site-main > .services-area .services{
+    background: rgba(248, 252, 253, 0.973);
+    padding: 2rem 0;
+    width: 16rem;
+    margin: 5rem .5rem;
+    transition: box-shadow .7s ease;
+}
+
+.site-main > .services-area .services:hover{
+    box-shadow: var(--box-shadow);
+}
+
+
+
+/* End Services Area */ 
+
+
+/* Client */ 
+
+
+.site-main .about-area .about-title h1{
+    font: normal  35px var(--roboto);
+}
+
+.site-main .about-area .about-title p{
+    padding: 1rem 7rem;
+}
+
+.site-main .about-area .client{
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+
+.site-main .about-area .client .client-img{
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client{
+    padding-top: 2rem;
+}
+
+.site-main .about-area .client .about-client h4{
+    font: normal 500 21px/ 20px var(--roboto);
+}
+
+.site-main .about-area .client .about-client p{
+    font-size: 14px;
+}
+
+.site-main .about-area .owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+
+/* End About Me */ 
+
+/* Contact */
+
+#contact {
+    color:black;
+    text-align: center;
+    background: black;
+    margin-bottom: 300px;
+    z-index: 5;
+}
+
+#contact h1{
+    font: normal  35px/ 72px var(--roboto);
+}
+
+#contact .container-fluid{
+    color:white;
+    padding-top: 20px; padding-bottom: 65px;
+    background: url(contactfond.png) center 0 no-repeat fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+}
+
+.cadre-noir {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 20px; padding-bottom: 20px;
+    margin-top: 50px;
+
+}
+
+.site-main #contact .services-title{
+    padding: 0 14rem;
+}
+
+.site-main #contact .services-title h1{
+    font-size: 35px;
+}
+
+#contact .para {
+    color:white;
+    letter-spacing: 1px;
+}
+
+fieldset.para{
+    color: var(--text-color);
+    font: normal 400 15px/ 25px var(--roboto);
+}
+
+/* End Contact */
+
+
+/* Formulaire */
+
+legend {
+    font-family: 'Roboto-Condensed-Light', Calibri, "Trebuchet Sans MS", sans-serif;
+    letter-spacing: 1px;
+}
+
+label {
+    margin:5px;
+    color:white;
+}
+    
+.custom-file-label{
+    text-align: left;
+}
+
+
+/* End Formulaire */ 
+
+/* Footer Area */ 
+
+footer {
+    position: fixed;
+    background-color: black;
+    color: #4b4b4b;
+    height: 300px;
+    bottom: 0; left:0;
+    z-index: -2000;
+}
+
+footer h2{
+    font-family: Neoteric, Calibri, "Trebuchet Sans MS", sans-serif;
+    font-size: 1.9em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 150;
+}
+
+footer p, footer h2{
+    position: relative;
+    bottom: -50px;
+}
+
+/* End Footer */ 
