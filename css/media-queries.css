@@ -1,0 +1,43 @@
+@media all and (max-width:575px){
+    /* ********** NAVBAR ********** */
+    .navbar-brand {display: none;}
+    .nav-link { font: normal 300 1.1rem/25px var(--neoteric);}
+     #navbarNav {background-color: rgba(0, 0, 0, 0.85)}
+    .navbar{padding-top: 0;}
+    /* ********** PORTFOLIO ********** */
+    .project-area {padding: 2rem 0;}
+    .button-group button + button, #btn1 {padding-left: 0;font: normal 500 16px/70px var(--roboto);}
+    /* ********** ABOUT ********** */
+    .about-area {padding: 15px;}
+    .about-area h2 {margin-top:2rem;}
+    .about-area h1 {margin-top:2rem;}
+    .site-main .about-area .about-title h3 {padding-bottom: 1.5rem;}
+    /* ********** SERVICES ********** */
+    .site-main > .services-area .services {margin:15px;}
+    #services{padding: 0;}
+    /* ********** CONTACT ********** */
+    #contact .container-fluid {padding: 0;}
+    .cadre-noir {margin-top: 0;}
+
+    }
+@media all and (max-width:1023px){
+    /* ********** NAVBAR ********** */
+    .navbar-brand {display: none;}
+    .nav-link { font: normal 300 1rem/20px var(--neoteric);}
+    #navbarNav {background-color: rgba(0, 0, 0, 0.85)}
+    .navbar{padding-top: 0;}
+    /* ********** PORTFOLIO ********** */
+    .project-area {padding: 2rem 0;}
+    .button-group button + button, #btn1 {padding-left: 0;font: normal 500 16px/70px var(--roboto);}
+    /* ********** ABOUT ********** */
+    .about-area {padding: 15px;}
+    .about-area h2 {margin-top:2rem;}
+    .about-area h1 {margin-top:2rem;}
+    .site-main > .services-area .services {margin:15px;}
+    /* ********** SERVICES ********** */
+    .site-main > .services-area .services {margin:15px;}
+    #services{padding: 0;}
+    /* ********** CONTACT ********** */
+    #contact .container-fluid {padding: 0;}
+    .cadre-noir {margin-top: 0;}
+}

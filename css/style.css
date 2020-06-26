@@ -2,8 +2,6 @@
 @import url(./fonts.css);
 /* css variables */ 
 @import url(./partials/_variables.css);
-/* import global styling */ 
-@import url(./partials/_global.css);
 
 /* *********** NAVIGATION ***********  */
 .navbar {
@@ -73,7 +71,7 @@
     z-index: 999;
 }
 .contact-button {
-    margin-top: 2rem;
+    margin: 2rem;
     background: var(--gradient-color);
     background-clip: padding-box;
     color: whitesmoke;
@@ -91,16 +89,12 @@
 }
 .logo {
     padding-top: 3rem;
-    margin:auto;
     z-index: 999;
 }
 
 /* *********** PORTFOLIO ***********  */
 .video {
     background-color: black;
-}
-.services-title{
-    padding: 0 14rem;
 }
 .project-area  h1{
     font-size: 35px;
@@ -126,24 +120,20 @@
 }
 
 /* *********** ABOUT ***********  */
-.site-main .about-area{
+.about-area{
     padding: 8rem 5rem;
     background-color: black;
     color:white;
 }
-
 .espace{
     height:2rem;
 }
-
-.site-main .about-area .about-title h2 {
+.about-title h2 {
     text-align: center;
     font-family: Neoteric, Calibri, "Trebuchet Sans MS", sans-serif;
     font-size: 2.5em;
-
-    font-weight: 150;
+    font-weight: 100;
 }
-
 .site-main .about-area .about-title h3 {
     text-align: center;
     font-family: 'Roboto-Bold', Calibri, "Trebuchet Sans MS", sans-serif;
@@ -152,104 +142,79 @@
     text-transform: uppercase;  
     padding-bottom: 3rem;
 }
-
 .site-main .about-area .about-title .paragraph > p{
     padding: .4rem 0;
     text-align: justify;
 }
 
-/* End About Area */ 
-
-
-/* Services Area */ 
-
+/* *********** SERVICES ***********  */
 #services {
     padding: 2rem;
     background: white;
 }
-
 #services .container {
     margin-top: 2rem;
 }
-
-#services .container .services-list {
+.service-area {
+    display: flex;
+    justify-content: center;
+}
+.container .services-list {
     margin-top: -2rem;
 }
-
-.site-main .services-area .services-title h1{
+.services-area .services-title h1{
     font-size: 35px;
 }
-
-.site-main .services-area .services-title strong{
+.services-area .services-title strong{
     font-size: 1.1em;
 }
-
-.site-main > .services-area .services{
+.services-area .services{
     background: rgba(248, 252, 253, 0.973);
     padding: 2rem 0;
     width: 16rem;
-    margin: 5rem .5rem;
+    margin: 2rem .5rem;
     transition: box-shadow .7s ease;
 }
-
-.site-main > .services-area .services:hover{
+.services-area .services:hover{
     box-shadow: var(--box-shadow);
 }
 
-
-
-/* End Services Area */ 
-
-
-/* Client */ 
-
-
-.site-main .about-area .about-title h1{
+/* *********** AVIS ***********  */
+.about-title h1{
     font: normal  35px var(--roboto);
 }
-
-.site-main .about-area .about-title p{
+.about-title p{
     padding: 1rem 7rem;
 }
-
-.site-main .about-area .client{
+.client{
     background: #ffffff10;
     box-shadow: var(--box-shadow);
-    margin: 3rem 0rem;
+    margin: 3rem 0;
 }
-
-.site-main .about-area .client .client-img{
+.client .client-img{
     padding: 2rem;
 }
-
-.site-main .about-area .client .about-client{
+.client .about-client{
     padding-top: 2rem;
 }
-
-.site-main .about-area .client .about-client h4{
+.client .about-client h4{
     font: normal 500 21px/ 20px var(--roboto);
 }
-
-.site-main .about-area .client .about-client p{
+.client .about-client p{
     font-size: 14px;
 }
-
-.site-main .about-area .owl-carousel .owl-item{
+.owl-carousel .owl-item{
     display: flex;
     justify-content: center;
     padding: 0 1.5rem;
 }
-
-.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+.owl-dot.active span{
     background: var(--primary-color);
     width: 12px;
     height: 12px;
 }
 
-/* End About Me */ 
-
-/* Contact */
-
+/* *********** CONTACT ***********  */
 #contact {
     color:black;
     text-align: center;
@@ -257,11 +222,10 @@
     margin-bottom: 300px;
     z-index: 5;
 }
-
 #contact h1{
     font: normal  35px/ 72px var(--roboto);
+    margin-bottom: 15px;
 }
-
 #contact .container-fluid{
     color:white;
     padding-top: 20px; padding-bottom: 65px;
@@ -269,53 +233,48 @@
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover; /* version standardisée */
 }
-
 .cadre-noir {
     background-color: rgba(0, 0, 0, 0.5);
     padding-top: 20px; padding-bottom: 20px;
     margin-top: 50px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
 .site-main #contact .services-title{
     padding: 0 14rem;
 }
-
 .site-main #contact .services-title h1{
     font-size: 35px;
 }
-
 #contact .para {
     color:white;
     letter-spacing: 1px;
 }
-
+.form-row {
+    justify-content: center;
+}
 fieldset.para{
     color: var(--text-color);
     font: normal 400 15px/ 25px var(--roboto);
 }
-
-/* End Contact */
-
-
-/* Formulaire */
-
 legend {
+    margin-top: 15px;
     font-family: 'Roboto-Condensed-Light', Calibri, "Trebuchet Sans MS", sans-serif;
     letter-spacing: 1px;
 }
-
 label {
     margin:5px;
     color:white;
 }
-    
+small.space {
+    margin-bottom: 15px;
+}
 .custom-file-label{
     text-align: left;
 }
 
-
-/* Footer  */
+/* *********** FOOTER ***********  */
 footer {
     position: fixed;
     background-color: black;
@@ -335,4 +294,3 @@ footer p, footer h2{
     position: relative;
     bottom: -50px;
 }
-/* End Footer */ 

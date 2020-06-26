@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
 
 </head>
 
@@ -69,12 +70,12 @@
     <section class="home container-fluid">
         <div id="video-background-area"></div>
         <div class="home-content">
-            <img class="logo" src="img/LCR_logo_blanc.png" alt="LCR Video logo" width="400px"/>
+            <img class="logo" src="img/LCR_logo_blanc.png" alt="LCR Video logo"/>
             <a href="#contact">
                 <button class="btn button text-uppercase contact-button">Contacter</button>
             </a>
         </div>
-        <a href="#portfolio"><img class="fleche" src="img/triangle5.png" alt="fleche" width="26px"/></a>
+        <a href="#portfolio"><img class="fleche" src="img/triangle5.png" alt="fleche"/></a>
     </section>
 </header>
 <!--  ======================= ******* MAIN ******* ============================== -->
@@ -193,7 +194,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
+                <div class="offset-lg-0 col-lg-4 offset-md-3 col-md-6 col-sm-12 element-item clip">
                     <div class="video embed-responsive embed-responsive-16by9">
                         <iframe src="https://player.vimeo.com/video/317380573?color=ffffff&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -241,12 +242,7 @@
             </div>
         </div>
     </section>
-
-    <!--  ========================= End About Area ==========================  -->
-
-
-    <!--  ====================== Start Services Area =============================  -->
-
+    <!--  ====================== SERVICES =============================  -->
     <section id="services" class="services-area">
         <div class="container">
             <div class="row">
@@ -260,7 +256,7 @@
             </div>
             <div class="container services-list">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-area col-lg-4 col-md-6 col-sm-12">
                         <div class="services">
                             <div class="sevices-img text-center py-4">
                                 <img src="./img/services/s3.png" alt="Services-1">
@@ -274,7 +270,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-area col-lg-4 col-md-6 col-sm-12">
                         <div class="services">
                             <div class="sevices-img text-center py-4">
                                 <img src="./img/services/s1.png" alt="Services-2">
@@ -287,7 +283,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="service-area offset-lg-0 col-lg-4 offset-md-3 col-md-6 col-sm-12">
                         <div class="services">
                             <div class="sevices-img text-center py-4">
                                 <img src="./img/services/s2.png" alt="Services-3">
@@ -304,21 +300,13 @@
             </div>
         </div>
     </section>
-
-    <!--  ====================== End Services Area =============================  -->
-
-
-    <!--  ======================== Clients ==============================  -->
-
+    <!--  ======================== CLIENTS ==============================  -->
     <section id="avis" class="about-area">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
                     <div class="about-title">
                         <h1 class="text-uppercase title-text">Ils m'ont fait confiance</h1>
-                        <p class="para">
-                            La satisfaction de mes clients est ma priorité.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -396,43 +384,33 @@
         </div>
 
     </section>
-
-    <!--  ======================== End Clients ==============================  -->
-
-    <!--  ========================== Contact ============================  -->
-
+    <!--  ========================== CONTACT ============================  -->
     <section id="contact">
         <div class="container-fluid">
             <div class="container">
                 <div class="cadre-noir">
                     <h1 class="text-center text-uppercase title-text">Contact</h1>
-
-                    <div class="row">
-                        <div class="offset-md-4 col-md-4">
-                            <br/>
-                            <address><p class="para">Lyon – Valence</p>
-                                <p class="para">Tel : 06 77 52 10 36 | yannis@lcr-video.com</p></address>
-                            <p><img src="img/LCR-contact.png" alt="logos_reseaux_sociaux" width="200px"
-                                    usemap="#reseaux_sociaux"></p>
-                            <!-- Image cliquable -->
-                            <map name="reseaux_sociaux">
-                                <area shape="circle" coords="15, 25, 15" alt="telephone" href="tel:+33677521036">
-                                <area shape="circle" coords="72, 25, 15" alt="instagram"
-                                      href="https://www.instagram.com/yannislcr/">
-                                <area shape="circle" coords="128, 25, 15" alt="vimeo"
-                                      href="https://vimeo.com/user90211483?fbclid=IwAR2dOk7VNUSMR8lLEwaxQjLERwHsNVotAX0sfXhwXu2IbuIvl04_Lvspflg">
-                                <area shape="circle" coords="184, 25, 15" alt="facebook"
-                                      href="https://www.facebook.com/lcrvideo">
-                            </map>
-                        </div>
-                    </div>
+                    <address><p class="para">Lyon – Valence</p>
+                        <p class="para">Tel : 06 77 52 10 36 | yannis@lcr-video.com</p></address>
+                    <p><img src="img/LCR-contact.png" alt="logos_reseaux_sociaux"
+                            usemap="#reseaux_sociaux"></p>
+                    <!-- Image cliquable -->
+                    <map name="reseaux_sociaux">
+                        <area shape="circle" coords="15, 25, 15" alt="telephone" href="tel:+33677521036">
+                        <area shape="circle" coords="72, 25, 15" alt="instagram"
+                              href="https://www.instagram.com/yannislcr/">
+                        <area shape="circle" coords="128, 25, 15" alt="vimeo"
+                              href="https://vimeo.com/user90211483?fbclid=IwAR2dOk7VNUSMR8lLEwaxQjLERwHsNVotAX0sfXhwXu2IbuIvl04_Lvspflg">
+                        <area shape="circle" coords="184, 25, 15" alt="facebook"
+                              href="https://www.facebook.com/lcrvideo">
+                    </map>
 
                     <div class="row">
                         <!-- Formulaire -->
-                        <form method="post" action="traitement.php" enctype="multipart/form-data" class="col-lg-12">
+                        <form method="post" action="php/traitement.php" enctype="multipart/form-data" class="col-lg-12">
 
                             <div class="form-row">
-                                <div class="form-group offset-md-2 col-md-4">
+                                <div class="form-group col-md-4">
                                     <input type="text" name="nom" id="nom" placeholder="Nom / Société"
                                            required="required" class="form-control"/>
                                 </div>
@@ -443,19 +421,19 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="offset-md-2 col-md-4 form-group">
-                                    <input type="number" name="cp" id="cp" placeholder="Code postal" min-lenght="5"
-                                           max-lenght="5" required="required" class="form-control"/>
+                                <div class="col-md-4 form-group">
+                                    <input type="number" name="cp" id="cp" placeholder="Code postal" required="required"
+                                           class="form-control"/>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <input type="tel" name="tel" id="tel" placeholder="Portable" class="form-control"/>
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="offset-md-2 col-md-8 form-group">
+                                <div class="col-md-8 form-group">
                                     <input type="url" name="web" id="web" value="http://" class="form-control"
                                            aria-describedby="webHelpBlock"/>
-                                    <small id="webHelpBlock" class="form-text text-muted" style="text-align: left">
+                                    <small id="webHelpBlock" class="form-text text-muted space" style="text-align: left">
                                         Lien vers votre travail ou votre site web (facultatif).
                                     </small>
                                 </div>
@@ -499,7 +477,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="offset-md-2 col-md-8 form-group">
+                                <div class="col-md-8 form-group">
                                     <textarea name="message" placeholder="Message" required="required"
                                               class="form-control" aria-describedby="messageHelpBlock"></textarea>
                                     <small id="messageHelpBlock" class="form-text text-muted" style="text-align: left">
@@ -510,13 +488,13 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="offset-md-2 col-md-8 form-group">
+                                <div class="col-md-8 form-group">
                                     <div class="custom-file">
                                         <input name="pieceJointe" type="file" class="custom-file-input" id="customFile"
                                                aria-describedby="fichierHelpBlock">
                                         <label class="custom-file-label" for="customFile" data-browse="Parcourir">Pièce
                                             jointe</label>
-                                        <small id="fichierHelpBlock" class="form-text text-muted"
+                                        <small id="fichierHelpBlock" class="form-text text-muted space"
                                                style="text-align: left">
                                             Formats acceptés : pdf, doc, jpg, png, gif.
                                         </small>
@@ -524,10 +502,9 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <div class="form-group offset-md-2 col-md-8">
+                            <div class="form-row">
+                                <div class="form-group col-md-8">
                                     <div class="custom-control custom-switch">
-
                                         <input type="checkbox" class="custom-control-input" id="customSwitch1">
                                         <label class="custom-control-label" for="customSwitch1">
                                             Êtes-vous sûr d'envoyer ceci ?
@@ -536,26 +513,15 @@
                                 </div>
                             </div>
 
-
-                            <div class="row">
-                                <div class="offset-md-8 col-md-2 col">
-                                    <div class="site-buttons">
-                                        <button class="btn button primary-button mr-4 text-uppercase " type="submit"
-                                                name="envoyer"><span>ENVOYER</span></button>
-                                    </div>
-                                </div>
-                            </div>
+                            <button class="btn button text-uppercase contact-button">Envoyer</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!--  ========================== End Contact ============================  -->
 </main>
-<!--  ======================= End Main Area ================================ -->
-
+<!--  ======================= FOOTER ================================ -->
 <footer class="container-fluid">
     <div class="row">
         <div class="offset-lg-1 col-md-10">
