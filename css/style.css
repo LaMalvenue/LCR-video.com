@@ -5,30 +5,28 @@
 /* import global styling */ 
 @import url(./partials/_global.css);
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 /* *********** NAVIGATION ***********  */
-.header_area {
-    position: relative;
-}
-
-.menu .navbar .navbar-brand {
-    padding-left: 2rem ;
-    margin-top: -30px;
-}
-.menu .navbar {
+.navbar {
+    opacity: 0;
+    height: 40px;
+    transition: opacity 0.6s, height 0.4s;
     position:fixed;
     top:0; right:0;
     background-color: rgba(0, 0, 0, 0.85);
     text-align: right;
-    padding-top: 28px; padding-bottom: 0; padding-right: 0;
+    padding-top: 40px; padding-bottom: 0; padding-right: 0;
     width:100%;
     box-shadow: var(--box-shadow);
-    z-index: 999;
+    z-index: 9999;
 }
-.menu .nav-item .nav-link{
+.navbar-brand {
+    padding-left: 15px ;
+    margin-top: -40px;
+}
+#navbarNav {
+    padding-right:15px;
+}
+.nav-link{
     font: normal 300 0.8em/2px var(--neoteric);
     text-transform: uppercase;
     padding-left: 0.2rem;
@@ -36,15 +34,8 @@
     color: white;
     letter-spacing: 1px;
 }
-.menu .navbar-nav .active a{
-    background: rgba(255, 255, 255, 0.7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
-}
-.menu .navbar-nav a:hover{
-    background: rgba(255, 255, 255, 0.7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+.active a, .navbar-nav a:hover{
+    color: white;
 }
 
 /* *********** HOME ***********  */
@@ -87,10 +78,9 @@
     background-clip: padding-box;
     color: whitesmoke;
     transition: background .6s ease;
-    box-shadow: var(--box-shadow);
 }
 .contact-button:hover{
-    background: rgba(255, 255, 255, 0.57);
+    background: rgba(255, 255, 255, 0.5);
     background-clip: padding-box;
     color: #ede9f0;
 }
@@ -105,53 +95,37 @@
     z-index: 999;
 }
 
-/* End Banner Area */ 
-
-/* Project Area */ 
-
-
-.site-main .project-area .services-title{
+/* *********** PORTFOLIO ***********  */
+.video {
+    background-color: black;
+}
+.services-title{
     padding: 0 14rem;
 }
-
-.site-main .project-area  h1{
+.project-area  h1{
     font-size: 35px;
 }
-
-.site-main .project-area{
+.project-area{
     padding: 4rem 0;
     background: white;
 }
-
-.site-main .project-area .button-group button{
+.button-group button{
     background: transparent;
     border: none;
     font: normal 500 16px/130px var(--roboto);
     text-transform: uppercase;
 }
-
-.site-main .project-area .button-group button + button{
+.button-group button + button{
     padding-left: 2rem;
 }
-
-.site-main .project-area .grid .our-project > .title h4{
+.grid .title h4{
     font: normal 600 20px/12px var(--roboto);
 }
-
-.site-main .project-area .grid .our-project p{
+.grid p {
     margin-top: -0.2rem;
 }
 
-.site-main .project-area .grid .our-project .img a:hover img{
-    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
-}
-
-
-/* End Project Area */ 
-
-
-/* Start About Area */ 
-
+/* *********** ABOUT ***********  */
 .site-main .about-area{
     padding: 8rem 5rem;
     background-color: black;
