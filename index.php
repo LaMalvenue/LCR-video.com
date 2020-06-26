@@ -8,18 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name = "author" content = "Anais Rouviere">
 
-     <!--  Moteurs de recherche  -->   
+    <link rel="shortcut icon" type="image/png" href="img/LCR_logo_blanc2.png"/>
+    <title>L.C.R Video | Réalisateur - Monteur - Etalonneur | Lyon</title>
+
+     <!--  SEO  -->   
     <meta name="title" property="og:title" content="L.C.R Video | Réalisateur - Monteur - Etalonneur | Lyon">
     <meta name = "description" content = "Réalisateur et vidéaste basé à Lyon. 
     Réalisation, production et post-production de ► clip ► publicité ► corporate ► événementiel ► mariage..."/>
     <meta name="keywords" content="réalisateur lyon, clip video lyon, videaste lyon, video mariage lyon, clip video valence, realisateur valence, video mariage valence, montage video lyon, montage video valence" />
     <meta name="image" property="og:image" content="img/LCR_logo.png">
-    <meta name = "author" content = "Anaïs"/>
-
-
-    <link rel="shortcut icon" type="image/png" href="img/LCR_logo_blanc2.png"/>
-
-    <title>L.C.R Video | Réalisateur - Monteur - Etalonneur | Lyon</title>
+    <meta name = "author" content = "Anaïs Rouvière"/>
 
     <!--  Bootstrap css file  -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -27,44 +25,25 @@
     <!--  font awesome icons  -->
     <link rel="stylesheet" href="./css/all.min.css">
 
-
     <!--  Magnific Popup css file  -->
     <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
-
 
     <!--  Owl-carousel css file  -->
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
 
-
     <!--  custom css file  -->
-    <link rel="stylesheet" href="./css/style2.css">
-
-    <!--  Responsive css file  -->
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-
-
-    <!--  ======================= Start Header Area ============================== -->
  
     <header id="accueil" class="header_area">
-   <!--  ======================= Video Background (lg screen++) ============================== -->
-        <div class="d-none d-md-block" >
-            <video id="videoBackground" loop autoplay playsinline muted >
-                <source type="video/mp4" src="https://lcr-video.com/wp-content/uploads/2018/10/mix.mp4" 
-                alt="Video de fond"  /> 
-            </video>
-        </div>
-   <!--  ======================= Black Background (md screen--) ============================== -->
-        <div class="d-md-none">
-            <div class="black-background"></div>
-        </div>
 
-        <div class="main-menu">
+        <!--  ======================= Navigation ============================== -->
 
+        <div class="menu">
             <nav class=" navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="#"><img src="./img/LCR_logo_blanc.png" width="60" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -95,43 +74,25 @@
                     </ul>
                 </div>
             </nav>
-
-
-
         </div>
+
+    <!--  ======================= HOME ============================== -->
+
+        <section class="home container-fluid">
+
+                        <div id="video-background-area"></div>
+                        <div class="home-content">
+                            <img class="logo" src="img/LCR_logo_blanc.png" alt="LCR Video logo" width="400px"/>
+                            <a href="#contact"><button class="btn button text-uppercase contact-button">Contacter</button></a>
+                        </div>
+            <a href="#portfolio"><img class="fleche" src="img/triangle5.png" alt="fleche" width="26px"/></a>
+        </section>
     </header>
 
-    <!--  ======================= End Header Area ============================== -->
-
-    <!--  ======================= Start Main Area ================================ -->
+    <!--  ======================= MAIN ============================== -->
+    <!--  ======================= PORTFOLIO ============================== -->
 
     <main class="site-main">
-
-        <!--  ======================= Start Banner Area =======================  -->
-
-        <section class="site-banner">
-            <div class="container-fluid">
-                <div class="row">
-                    <img class="logo" src="img/LCR_logo_blanc.png" alt="LCR Video logo" width="400px"/>
-                </div>
-                <div class="row">
-                    <div class="site-buttons">
-                        <a href="#contact"><button type="button" class="btn button primary-button mr-4 text-uppercase">CONTACTER</button></a>
-                    </div>
-                </div>
-                <div class="d-none d-sm-block" >
-                <div class="row">
-                    <a href="#portfolio">
-                        <img class="fleche" src="img/triangle5.png" alt="fleche" width="26px"/>
-                    </a>
-                </div>
-            </div>
-            </div>
-        </section>
-        <!--  ======================= End Banner Area =======================  -->
-
-
-        <!--  ======================= Project Area =============================  -->
 
         <section id="portfolio" class="project-area">
             <div class="container-fluid">
@@ -686,9 +647,9 @@ fclose($monfichier);
     <!--  Scroll js file  -->
     <script src="js/scroll.js"></script>
 
-    <!--  Viméo js file  -->
+    <!--  Vimeo js file  -->
     <script src="https://player.vimeo.com/api/player.js"></script>
-
+    <script src="js/video-background.js"></script>
 </body>
 
 </html>
