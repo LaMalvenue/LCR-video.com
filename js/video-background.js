@@ -12,7 +12,7 @@ function setVideoBackground() {
     video.setAttribute('loop', '');
     var sourceVideo = document.createElement('source');
     sourceVideo.type ="video/mp4";
-    sourceVideo.src = "https://lcr-video.com/wp-content/uploads/2018/10/mix.mp4";
+    sourceVideo.src = "img/mix.mp4";
     sourceVideo.alt = "Video de fond";
     video.muted = true;
     video.play();

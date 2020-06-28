@@ -71,7 +71,7 @@
     z-index: 999;
 }
 .contact-button {
-    margin: 2rem;
+    margin: 1rem;
     background: var(--gradient-color);
     background-clip: padding-box;
     color: whitesmoke;
@@ -98,6 +98,7 @@
 }
 .project-area  h1{
     font-size: 35px;
+    margin-top: 1rem;
 }
 .project-area{
     padding: 4rem 0;
@@ -164,6 +165,7 @@
 }
 .services-area .services-title h1{
     font-size: 35px;
+    margin-top: 1rem;
 }
 .services-area .services-title strong{
     font-size: 1.1em;

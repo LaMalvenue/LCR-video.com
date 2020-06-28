@@ -22,9 +22,9 @@
     <!--  CSS  -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/all.min.css">
-    <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
-    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="lib-js/Magnific-Popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="lib-js/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib-js/owl-carousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-queries.css">
 
@@ -426,13 +426,13 @@
                                            class="form-control"/>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <input type="tel" name="tel" id="tel" placeholder="Portable" class="form-control"/>
+                                    <input type="tel" name="tel" id="tel" placeholder="Portable" class="form-control" />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-md-8 form-group">
-                                    <input type="url" name="web" id="web" value="http://" class="form-control"
-                                           aria-describedby="webHelpBlock"/>
+                                    <input type="text" name="web" id="web" value="http://" class="form-control"
+                                           aria-describedby="webHelpBlock">
                                     <small id="webHelpBlock" class="form-text text-muted space" style="text-align: left">
                                         Lien vers votre travail ou votre site web (facultatif).
                                     </small>
@@ -441,36 +441,36 @@
 
                             <div class="form-group row">
                                 <div class="col-md-12 form-group my-auto">
-                                    <fieldset id="typeDemande" class="para">
+                                    <fieldset id="object" class="para">
                                         <legend>Votre demande concerne</legend>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="typeDemande"
-                                                   id="clip" checked/>
+                                            <input class="custom-control-input" type="radio" name="object"
+                                                   id="clip" value="Clip" checked/>
                                             <label class="custom-control-label" for="clip">Clip</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="typeDemande"
-                                                   id="mode"/>
+                                            <input class="custom-control-input" type="radio" name="object"
+                                                   id="mode" value="Mode"/>
                                             <label class="custom-control-label" for="mode">Mode</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="typeDemande"
-                                                   id="corporate"/>
+                                            <input class="custom-control-input" type="radio" name="object"
+                                                   id="corporate" value="Corporate"/>
                                             <label class="custom-control-label" for="corporate">Corporate</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="typeDemande"
-                                                   id="pub"/>
+                                            <input class="custom-control-input" type="radio" name="object"
+                                                   id="pub" value="Publicité"/>
                                             <label class="custom-control-label" for="pub">Publicité</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="typeDemande"
-                                                   id="mariage"/>
+                                            <input class="custom-control-input" type="radio" name="object"
+                                                   id="mariage" value="Mariage"/>
                                             <label class="custom-control-label" for="mariage">Mariage</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="typeDemande"
-                                                   id="autre"/>
+                                            <input class="custom-control-input" type="radio" name="object"
+                                                   id="autre" value="Autre demande"/>
                                             <label class="custom-control-label" for="autre">Autre demande</label>
                                         </div>
                                     </fieldset>
@@ -490,30 +490,18 @@
                             <div class="form-row">
                                 <div class="col-md-8 form-group">
                                     <div class="custom-file">
-                                        <input name="pieceJointe" type="file" class="custom-file-input" id="customFile"
+                                        <input name="uploaded_file" type="file" class="custom-file-input" id="customFile"
                                                aria-describedby="fichierHelpBlock">
                                         <label class="custom-file-label" for="customFile" data-browse="Parcourir">Pièce
                                             jointe</label>
                                         <small id="fichierHelpBlock" class="form-text text-muted space"
                                                style="text-align: left">
-                                            Formats acceptés : pdf, doc, jpg, png, gif.
+                                            Formats acceptés : jpg, jpeg, png, pdf, doc/docx, txt (facultatif).
                                         </small>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-8">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                        <label class="custom-control-label" for="customSwitch1">
-                                            Êtes-vous sûr d'envoyer ceci ?
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button class="btn button text-uppercase contact-button">Envoyer</button>
+                            <input type="submit" value="Envoyer" class="btn button text-uppercase contact-button">
                         </form>
                     </div>
                 </div>
@@ -565,11 +553,10 @@ fclose($monfichier);
 
 <script src="./js/jquery.3.4.1.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./vendor/isotope/isotope.min.js"></script>
-<script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
-<script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+<script src="lib-js/isotope/isotope.min.js"></script>
+<script src="lib-js/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+<script src="lib-js/owl-carousel/js/owl.carousel.min.js"></script>
 <script src="./js/main.js"></script>
-
 <!--  Parallax js file  -->
 <script type="text/javascript">
     $(document).ready(function () {
@@ -578,10 +565,10 @@ fclose($monfichier);
     })
 </script>
 <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
-<script src="js/scroll.js"></script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script src="js/video-background.js"></script>
 <script src="js/navbar-effect.js"></script>
+<script src="js/scroll-spy.js"></script>
 </body>
 
 </html>
