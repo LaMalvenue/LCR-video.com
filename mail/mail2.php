@@ -1,6 +1,7 @@
 <?php
 require "PHPMailer/PHPMailerAutoload.php";
 
+// ***************************  Envoi du message du formulaire ***************************
 $mail = new PHPMailer();
 
 $mail->SMTPDebug = 0;
@@ -8,6 +9,16 @@ $mail->IsSMTP();
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'ssl';
 
+$mail->Host = 'mail.lcr-video.com';
+$mail->Port = 465;
+$mail->Username = 'noreply@lcr-video.com';
+$mail->Password = '*******';
+
+$mail->From = "noreply@lcr-video.com";
+$mail->FromName = $from_name = 'LCR Video';
+$mail->Sender = $from = 'noreply@lcr-video.com';
+$mail->AddReplyTo($from, $from_name);
+$mail->AddAddress('contact@lcr-video.com');
 
 $mail->CharSet = "UTF-8";
 $mail->IsHTML(true);
@@ -18,25 +29,37 @@ function smtpmailer($mail, $subject, $body)
 	$mail->Body = $body;
 	$mail->AltBody = strip_tags($body);
 
-	if (!$mail->Send()) {
-		return "Erreur lors de l'envoi du message, veuillez réessayer";
-	} else {
-		return "Votre message a bien été envoyé !";
+	try {
+		if (!$mail->Send()) {
+			return "Erreur lors de l'envoi du message, veuillez réessayer";
+		} else {
+			return "Votre message a bien été envoyé !";
+		}
+	} catch (phpmailerException $e) {
+		echo "Erreur lors de l'envoi du message, veuillez réessayer. Mailer Error: {$mail->ErrorInfo}";
 	}
 }
 
 function smtpmailerPJ($mail, $subject, $body, $pathFile)
 {
-	$mail->addAttachment($pathFile);
+	try {
+		$mail->addAttachment($pathFile);
+	} catch (phpmailerException $e) {
+		echo "Erreur lors de l'envoi de la pièce jointe, veuillez réessayer. Mailer Error: {$mail->ErrorInfo}";
+	}
 
 	$mail->Subject = $subject;
 	$mail->Body = $body;
 	$mail->AltBody = strip_tags($body);
 
-	if (!$mail->Send()) {
-		return "Erreur lors de l'envoi du message, veuillez réessayer";
-	} else {
-		return "Votre message a bien été envoyé !";
+	try {
+		if (!$mail->Send()) {
+			return "Erreur lors de l'envoi du message, veuillez réessayer";
+		} else {
+			return "Votre message a bien été envoyé !";
+		}
+	} catch (phpmailerException $e) {
+		echo "Erreur lors de l'envoi du message, veuillez réessayer. Mailer Error: {$mail->ErrorInfo}";
 	}
 }
 
@@ -48,6 +71,7 @@ if (isset ($_POST["firstName"]) &&
 	isset ($_POST["message"])) {
 
 	$nameClient = htmlspecialchars($_POST["firstName"]) . ' ' . htmlspecialchars($_POST["lastName"]);
+	$firstName = htmlspecialchars($_POST["firstName"]);
 	$email = htmlspecialchars($_POST["email"]);
 	$phone = htmlspecialchars($_POST["phone"]);
 	$city = htmlspecialchars($_POST["city"]);
@@ -57,10 +81,11 @@ if (isset ($_POST["firstName"]) &&
 	$message = htmlspecialchars($_POST["message"]);
 
 	$subj = $nameClient;
-	$msg .= '
-		<html lang="fr">
+	$msg = '
+		<html>
 			<body>
-			    <h3>Tu as reçu une demande ';
+			<img src="https://lcr-video.com/mail/img/banner-mail-message.png" alt="banniere LCR video">
+			    <h3 style="margin: 10px 0">Tu as reçu une demande ';
 	switch ($videoType) {
 		case "clip" :
 			$subj .= ' voudrait un ' . $videoType . ' vidéo ! 👹';
@@ -84,24 +109,23 @@ if (isset ($_POST["firstName"]) &&
 			$msg .= 'spéciale';
 			break;
 	}
-	$msg .= ' à ' . $city . '</h3></p>';
+	$msg .= ' à ' . $city . ' 👌</h3></p>';
 
 
-	$msg .= '		<hr>
-				<p>' . $message . '</p>
+	$msg .= '		<img src="https://lcr-video.com/mail/img/separator.png" alt="separator">
+				<p><blockquote style="font-size: 1.1rem;">«' . $message . '»</blockquote></p>
 				
-				<p>' . $nameClient;
+				<p><adress style="text-align: center; font-size: 0.8rem;">' . $nameClient;
 	if ($company != "") {
-		$msg .= ' (société ' . $company . ')</p>';
+		$msg .= ' (société ' . $company . ')<br>';
 	} else {
-		$msg .= '</p>';
+		$msg .= '<br>';
 	}
 	if ($web != "http://") {
-		$msg .= '<p><a href="' . $web . '">' . $web . '</a></p>';
+		$msg .= '<a href="' . $web . '">' . $web . '</a><br>';
 	}
-	$msg .= '<a>Contact : ' . $phone . ', <a href="mailto: ' . $email . '">' . $email . '</a></p>
-				<hr>
-                <p>Ceci est un envoi automatique, merci de ne pas répondre à cet e-mail</p>
+	$msg .= '<a>Contact : <a href="tel:+33' . $phone . '">' . $phone . '</a>, <a href="mailto: ' . $email . '">' . $email . '</a></adress></p>
+				<img src="https://lcr-video.com/mail/img/banner-bottom.png" alt="banniere LCR video">
 			</body>
 		</html>
 	';
@@ -130,7 +154,6 @@ if (isset ($_POST["firstName"]) &&
 		$result = move_uploaded_file($tmpName, $fileName);
 
 		if ($result) {
-			echo "Transfert terminé !";
 			$error = smtpmailerPJ($mail, $subj, $msg, $fileName);
 
 		} else {
@@ -139,18 +162,77 @@ if (isset ($_POST["firstName"]) &&
 	} else {
 		$error = smtpmailer($mail, $subj, $msg);
 	}
+
+	// ***************************  Envoi de l'accusé de réception ***************************
+	$deliveryreceipt = new PHPMailer();
+
+	$deliveryreceipt->SMTPDebug = 0;
+	$deliveryreceipt->IsSMTP();
+	$deliveryreceipt->SMTPAuth = true;
+	$deliveryreceipt->SMTPSecure = 'ssl';
+
+	$deliveryreceipt->Host = 'mail.lcr-video.com';
+	$deliveryreceipt->Port = 465;
+	$deliveryreceipt->Username = 'noreply@lcr-video.com';
+	$deliveryreceipt->Password = '*******';
+
+	$deliveryreceipt->From = "noreply@lcr-video.com";
+	$deliveryreceipt->FromName = $from_name = 'LCR Video';
+	$deliveryreceipt->Sender = $from = 'noreply@lcr-video.com';
+	$deliveryreceipt->AddAddress($email);
+
+	$deliveryreceipt->CharSet = "UTF-8";
+	$deliveryreceipt->IsHTML(true);
+
+	$deliveryreceipt->Subject = "Accusé de réception de votre message 📧";
+
+	$messagedelivery = '
+<html>
+<body>
+<img src="https://lcr-video.com/mail/img/banner-accuse-message.png" alt="banniere LCR video">
+<h3 style="margin: 10px 0">Votre message a bien été envoyé ! 👍</h3></p>';
+
+	$messagedelivery .= '<p>Bonjour ' . $firstName . ',</p>';
+	$messagedelivery .= '<p>Vous m\'avez envoyé le message suivant : </p>';
+	$messagedelivery .= '<img src="https://lcr-video.com/mail/img/separator.png" alt="separator">';
+	$messagedelivery .= '<p><blockquote style="font-size: 1.1rem; text-align: center; font-style: italic;">«' . $message . '»</blockquote></p>
+
+<p><adress style="text-align: center; font-size: 0.8rem; font-style: italic;">' . $nameClient;
+	if ($company != "") {
+		$messagedelivery .= ' (société ' . $company . ')<br>';
+	} else {
+		$messagedelivery .= '<br>';
+	}
+	if ($web != "http://") {
+		$msg .= '<a href="' . $web . '">' . $web . '</a><br>';
+	}
+	$messagedelivery .= '<a>Contact : <a href="tel:+33' . $phone . '">' . $phone . '</a>, <a href="mailto: ' . $email . '">' . $email . '</a></adress></p>
+
+<img src="https://lcr-video.com/mail/img/separator.png" alt="separator">
+<p>Vous recevrez une réponse dans les plus brefs délais, n\'hésitez pas à surveiller vos e-mails ! 😀</p>
+	<p>A très bientôt,</p>
+	<h4>Yannis de LCR Video</h4>
+<img src="https://lcr-video.com/mail/img/banner-bottom.png" alt="banniere LCR video">
+</body>
+</html>
+';
+	$deliveryreceipt->Body = $messagedelivery;
+	$deliveryreceipt->AltBody = strip_tags($messagedelivery);
+
+	$deliveryreceipt->Send();
 }
+
 header("Refresh:2; url=../index.php");
 ?>
 
-<html lang="fr">
+<html>
 <head>
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png"/>
     <title>Votre message</title>
 </head>
-<body style="background: black;padding-top:70px;color: white;font-family:sans-serif;">
-<center><h2><?php echo $error; ?></h2>
-    <p>Vous allez bientôt être redirigés vers l'accueil</p>
-</center>
-</body>
+<body style="background: black;padding-top:70px;color: white;font-family:sans-serif; text-align: center">
+<h2><?php echo $error; ?></h2>
+<p>Vous allez bientôt être redirigés vers l'accueil</p>
 
+</body>
 </html>
