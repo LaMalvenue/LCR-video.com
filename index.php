@@ -407,34 +407,47 @@
 
                     <div class="row">
                         <!-- Formulaire -->
-                        <form method="post" action="php/traitement.php" enctype="multipart/form-data" class="col-lg-12">
+                        <form method="post" action="mail/mail.php" enctype="multipart/form-data" class="col-lg-12">
 
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <input type="text" name="nom" id="nom" placeholder="Nom / Société"
+                                    <input type="text" name="firstName" id="firstName" placeholder="Prénom"
                                            required="required" class="form-control"/>
                                 </div>
+                                <div class="form-group col-md-4">
+                                    <input type="text" name="lastName" id="lastName" placeholder="Nom"
+                                           required="required" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <input type="email" name="email" id="email" placeholder="Adresse mail"
                                            required="required" class="form-control"/>
                                 </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col-md-4 form-group">
-                                    <input type="number" name="cp" id="cp" placeholder="Code postal" required="required"
+                                <div class="form-group col-md-4">
+                                    <input type="tel" name="phone" id="phone" placeholder="Telephone"
                                            class="form-control"/>
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <input type="tel" name="tel" id="tel" placeholder="Portable" class="form-control" />
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-8 form-group">
+                                    <input type="text" name="city" id="city" placeholder="Ville" required="required"
+                                           class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-8 form-group">
+                                    <input type="text" name="company" id="company" placeholder="Société"
+                                           class="form-control"/>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-md-8 form-group">
                                     <input type="text" name="web" id="web" value="http://" class="form-control"
                                            aria-describedby="webHelpBlock">
-                                    <small id="webHelpBlock" class="form-text text-muted space" style="text-align: left">
-                                        Lien vers votre travail ou votre site web (facultatif).
+                                    <small id="webHelpBlock" class="form-text text-muted space"
+                                           style="text-align: left">
+                                        Lien vers votre travail ou votre site web (facultatif)
                                     </small>
                                 </div>
                             </div>
@@ -444,33 +457,33 @@
                                     <fieldset id="object" class="para">
                                         <legend>Votre demande concerne</legend>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="object"
-                                                   id="clip" value="Clip" checked/>
+                                            <input class="custom-control-input" type="radio" name="videoType"
+                                                   id="clip" value="clip" checked/>
                                             <label class="custom-control-label" for="clip">Clip</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="object"
-                                                   id="mode" value="Mode"/>
+                                            <input class="custom-control-input" type="radio" name="videoType"
+                                                   id="mode" value="mode"/>
                                             <label class="custom-control-label" for="mode">Mode</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="object"
-                                                   id="corporate" value="Corporate"/>
+                                            <input class="custom-control-input" type="radio" name="videoType"
+                                                   id="corporate" value="corporate"/>
                                             <label class="custom-control-label" for="corporate">Corporate</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="object"
-                                                   id="pub" value="Publicité"/>
+                                            <input class="custom-control-input" type="radio" name="videoType"
+                                                   id="pub" value="publicité"/>
                                             <label class="custom-control-label" for="pub">Publicité</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="object"
-                                                   id="mariage" value="Mariage"/>
+                                            <input class="custom-control-input" type="radio" name="videoType"
+                                                   id="mariage" value="mariage"/>
                                             <label class="custom-control-label" for="mariage">Mariage</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input class="custom-control-input" type="radio" name="object"
-                                                   id="autre" value="Autre demande"/>
+                                            <input class="custom-control-input" type="radio" name="videoType"
+                                                   id="autre" value="autre demande"/>
                                             <label class="custom-control-label" for="autre">Autre demande</label>
                                         </div>
                                     </fieldset>
@@ -482,7 +495,7 @@
                                               class="form-control" aria-describedby="messageHelpBlock"></textarea>
                                     <small id="messageHelpBlock" class="form-text text-muted" style="text-align: left">
                                         Décrivez votre projet. Si vous avez une documentation, vous pourrez l'envoyer
-                                        ci-dessous.
+                                        ci-dessous
                                     </small>
                                 </div>
                             </div>
@@ -490,13 +503,14 @@
                             <div class="form-row">
                                 <div class="col-md-8 form-group">
                                     <div class="custom-file">
-                                        <input name="uploaded_file" type="file" class="custom-file-input" id="customFile"
+                                        <input name="uploaded_file" type="file" class="custom-file-input"
+                                               id="customFile"
                                                aria-describedby="fichierHelpBlock">
                                         <label class="custom-file-label" for="customFile" data-browse="Parcourir">Pièce
                                             jointe</label>
                                         <small id="fichierHelpBlock" class="form-text text-muted space"
                                                style="text-align: left">
-                                            Formats acceptés : jpg, jpeg, png, pdf, doc/docx, txt (facultatif).
+                                            Formats acceptés : jpg, jpeg, png, pdf, doc/docx, txt (facultatif)
                                         </small>
                                     </div>
                                 </div>
