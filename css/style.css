@@ -32,7 +32,7 @@
     color: white;
     letter-spacing: 1px;
 }
-.active a, .navbar-nav a:hover{
+.navbar-dark .navbar-nav a.activeSection, .navbar-nav a:hover{
     color: white;
 }
 

@@ -9,7 +9,7 @@
     <meta name="author" content="Anais Rouviere">
 
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-    <title>L.C.R Video | Réalisateur - Monteur - Etalonneur | Lyon</title>
+    <title>L.C.R Video | Réalisateur - Monteur - Etalonneur</title>
 
     <!--  META  -->
     <meta name="title" property="og:title" content="L.C.R Video | Réalisateur - Monteur - Etalonneur | Lyon">
@@ -32,7 +32,7 @@
 
 <body>
 
-<header id="accueil">
+<header>
     <!--  ======================= Navigation ============================== -->
     <div class="menu">
         <nav class=" navbar navbar-expand-lg navbar-dark">
@@ -43,9 +43,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="mr-auto"></div>
-                <ul class="navbar-nav ">
-                    <li class="nav-item active ">
-                        <a class="nav-link" href="#accueil">Accueil <span class="sr-only">(current)</span></a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link activeSection" href="#accueil">Accueil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -67,7 +67,7 @@
         </nav>
     </div>
     <!--  ======================= HOME ============================== -->
-    <section class="home container-fluid">
+    <section  id="accueil" data-spy class="home container-fluid">
         <div id="video-background-area"></div>
         <div class="home-content">
             <img class="logo" src="img/LCR_logo_blanc.png" alt="LCR Video logo"/>
@@ -81,7 +81,7 @@
 <!--  ======================= ******* MAIN ******* ============================== -->
 <main class="site-main">
     <!--  ======================= PORTFOLIO ============================== -->
-    <section id="portfolio" class="project-area">
+    <section id="portfolio" class="project-area" data-spy>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -209,7 +209,7 @@
         </div>
     </section>
     <!--  ========================= ABOUT ==========================  -->
-    <section id="about" class="about-area">
+    <section id="about" class="about-area" data-spy>
         <div class="container">
             <div class="row h-100">
                 <div class="col-md-12   col-lg-6      col-xl-6     about-title my-auto">
@@ -243,7 +243,7 @@
         </div>
     </section>
     <!--  ====================== SERVICES =============================  -->
-    <section id="services" class="services-area">
+    <section id="services" class="services-area" data-spy>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center services-title">
@@ -301,7 +301,7 @@
         </div>
     </section>
     <!--  ======================== CLIENTS ==============================  -->
-    <section id="avis" class="about-area">
+    <section id="avis" class="about-area" data-spy>
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
@@ -385,7 +385,7 @@
 
     </section>
     <!--  ========================== CONTACT ============================  -->
-    <section id="contact">
+    <section id="contact" data-spy>
         <div class="container-fluid">
             <div class="container">
                 <div class="cadre-noir">
