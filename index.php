@@ -194,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="offset-lg-0 col-lg-4 offset-md-3 col-md-6 col-sm-12 element-item clip">
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
                     <div class="video embed-responsive embed-responsive-16by9">
                         <iframe src="https://player.vimeo.com/video/317380573?color=ffffff&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -206,7 +206,7 @@
                     </div>
                 </div>
 
-                <div class="offset-lg-0 col-lg-4 offset-md-3 col-md-6 col-sm-12 element-item clip">
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
                     <div class="video embed-responsive embed-responsive-16by9">
                         <iframe src="https://player.vimeo.com/video/299556344?color=ffffff&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -230,7 +230,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item mode">
                     <div class="video embed-responsive embed-responsive-16by9">
                         <iframe src="https://player.vimeo.com/video/428087737?color=ffffff&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -266,8 +266,7 @@
                     </div>
                 </div>
 
-
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item mariage">
+                <div class="col-lg-4 offset-md-3 col-md-6 col-sm-12 element-item mariage">
                     <div class="video embed-responsive embed-responsive-16by9">
                         <iframe src="https://player.vimeo.com/video/301485209?color=ffffff&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
