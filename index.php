@@ -92,12 +92,37 @@
             <div class="button-group">
                 <button type="button" data-filter="*" class="active" id="btn1">All</button>
                 <button type="button" data-filter=".clip">Clip</button>
+                <button type="button" data-filter=".corporate">Corporate</button>
                 <button type="button" data-filter=".mode">Mode</button>
-                <button type="button" data-filter=".event">Evenement</button>
-                <button type="button" data-filter=".mariage">Mariage</button>
+                <button type="button" data-filter=".pub">Publicité</button>
             </div>
             <!--  ================== GRILLE VIDEOS ================== -->
             <div class="row grid">
+                <!--  ================== LIGNE 1 ================== -->
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item corporate">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/691045247?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">VANGART</h4>
+                        <p class="text-secondary">Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item pub">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/751817093?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">Patte Blanche atelier</h4>
+                        <p class="text-secondary">Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div>
+
                 <div class="col-lg-4 col-md-6 col-sm-12 element-item mode">
                     <div class="video embed-responsive embed-responsive-16by9">
                         <iframe src="https://player.vimeo.com/video/361181771?color=ffffff&title=0&byline=0&portrait=0"
@@ -106,34 +131,85 @@
                     </div>
                     <div class="title py-4">
                         <h4 class="text-uppercase">Blossom &#8211; Il pleut sur Seoul</h4>
+                       <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div>
+
+                 <!--  ================== LIGNE 2 ================== -->
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/752494966?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">Prominence &#8211; Sail The Seas</h4>
+                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/751282874?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">Bear’s Towers  &#8211; HOMETOWN</h4>
+                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/726185800?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">Tsune  &#8211; Le Bout Du Chemin</h4>
+                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div>
+
+                 <!--  ================== LIGNE 3 ================== -->
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/507247037?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">Divergence &#8211; BOUNCES AND ECHOES</h4>
+                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item corporate">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/752484152?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">Patte Blanche Atelier x Ulule</h4>
                         <p class="text-secondary">Réalisation · Montage · Etalonnage</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
                     <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/367453843?color=ffffff&title=0&byline=0&portrait=0"
+                        <iframe src="https://player.vimeo.com/video/689477674?color=ffffff&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
                                 allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
                     <div class="title py-4">
-                        <h4 class="text-uppercase">T. F. H. &#8211; Laser Induced Obscurity</h4>
+                        <h4 class="text-uppercase">I AM SPARROW ft. MPJ &#8211; Galatée</h4>
                         <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/330299661?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">ANNA &#8211; Vicious Circle</h4>
-                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
+                <!--  ================== LIGNE 4 ================== -->
                 <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
                     <div class="video embed-responsive embed-responsive-16by9">
                         <iframe src="https://player.vimeo.com/video/390847042?color=ffffff&title=0&byline=0&portrait=0"
@@ -148,136 +224,64 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
                     <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/441822332?color=ffffff&title=0&byline=0&portrait=0"
+                        <iframe src="https://player.vimeo.com/video/507248056?color=ffffff&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
                                 allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
                     <div class="title py-4">
-                        <h4 class="text-uppercase">RASH &#8211; Maladie</h4>
+                        <h4 class="text-uppercase">Noir Lotus &#8211; Rêverie</h4>
+                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div> 
+
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/330299661?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">ANNA &#8211; Vicious Circle</h4>
+                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
+                    </div>
+                </div>
+
+                <!--  ================== LIGNE 5 ================== -->
+                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
+                    <div class="video embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/689476131?color=ffffff&title=0&byline=0&portrait=0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="title py-4">
+                        <h4 class="text-uppercase">PBM &#8211; ALL IN</h4>
                         <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
                     <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/317378365?color=ffffff&title=0&byline=0&portrait=0"
+                        <iframe src="https://player.vimeo.com/video/691079697?color=ffffff&title=0&byline=0&portrait=0"
                                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
                                 allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
                     <div class="title py-4">
-                        <h4 class="text-uppercase">Ozai &#8211; Foudroyé</h4>
+                        <h4 class="text-uppercase">Oorun &#8211; L’aube</h4>
                         <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/361178928?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">Armée Noire &#8211; M20</h4>
-                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
-                    </div>
+                  <div class="video embed-responsive embed-responsive-16by9">
+                      <iframe src="https://player.vimeo.com/video/759862059?color=ffffff&title=0&byline=0&portrait=0"
+                              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                              allow="autoplay; fullscreen" allowfullscreen></iframe>
+                  </div>
+                  <div class="title py-4">
+                      <h4 class="text-uppercase">Rose  &#8211;  Miroir</h4>
+                      <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
+                  </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/390860863?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">Rose &#8211; Aeternum</h4>
-                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/317380573?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">Skodri &#8211; Bif</h4>
-                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/299556344?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">Malfoy &#8211; Foufou tu jactes</h4>
-                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/390854987?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">RASH &#8211; Caviar</h4>
-                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item mode">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/428087737?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">Enamorm &#8211; BABIOLES</h4>
-                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item event">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/299570095?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">Le mondial du tatouage 2018</h4>
-                        <p class="text-secondary">Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 element-item clip">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/317375814?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">Armée Noire &#8211; John Dee</h4>
-                        <p class="text-secondary">Scenario · Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 offset-md-3 col-md-6 col-sm-12 element-item mariage">
-                    <div class="video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://player.vimeo.com/video/301485209?color=ffffff&title=0&byline=0&portrait=0"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="title py-4">
-                        <h4 class="text-uppercase">Laurène et Florian</h4>
-                        <p class="text-secondary">Réalisation · Montage · Etalonnage</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>

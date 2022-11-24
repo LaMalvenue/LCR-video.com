@@ -18,7 +18,7 @@ $mail->From = "noreply@lcr-video.com";
 $mail->FromName = $from_name = 'LCR Video';
 $mail->Sender = $from = 'noreply@lcr-video.com';
 $mail->AddReplyTo($from, $from_name);
-$mail->AddAddress('contact@lcr-video.com');
+$mail->AddAddress('lcrvideo.contact@gmail.com');
 
 $mail->CharSet = "UTF-8";
 $mail->IsHTML(true);
