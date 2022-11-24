@@ -468,7 +468,7 @@
                 <div class="cadre-noir">
                     <h1 class="text-center text-uppercase title-text">Contact</h1>
                     <address><p class="para">Lyon – Valence</p>
-                        <p class="para">Tel : 06 77 52 10 36 | contact@lcr-video.com</p></address>
+                        <p class="para">Tel : 06 77 52 10 36 | lcrvideo.contact@gmail.com</p></address>
                     <p><img src="img/LCR-contact.png" alt="logos_reseaux_sociaux"
                             usemap="#reseaux_sociaux"></p>
                     <!-- Image cliquable -->

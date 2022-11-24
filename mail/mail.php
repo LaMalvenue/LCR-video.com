@@ -4,19 +4,19 @@ require "PHPMailer/PHPMailerAutoload.php";
 // ***************************  Envoi du message du formulaire ***************************
 $mail = new PHPMailer();
 
-$mail->SMTPDebug = 0;
+$mail->SMTPDebug = 0;     
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
-$mail->SMTPSecure = 'ssl';
+$mail->SMTPSecure = 'tls';
 
-$mail->Host = 'mail.lcr-video.com';
-$mail->Port = 465;
-$mail->Username = 'noreply@lcr-video.com';
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = 587;
+$mail->Username = 'lcrvideo.contact@gmail.com';
 $mail->Password = '*******';
 
-$mail->From = "noreply@lcr-video.com";
+$mail->From = "lcrvideo.contact@gmail.com";
 $mail->FromName = $from_name = 'LCR Video';
-$mail->Sender = $from = 'noreply@lcr-video.com';
+$mail->Sender = $from = 'lcrvideo.contact@gmail.com';
 $mail->AddReplyTo($from, $from_name);
 $mail->AddAddress('lcrvideo.contact@gmail.com');
 
@@ -169,16 +169,16 @@ if (isset ($_POST["firstName"]) &&
 	$deliveryreceipt->SMTPDebug = 0;
 	$deliveryreceipt->IsSMTP();
 	$deliveryreceipt->SMTPAuth = true;
-	$deliveryreceipt->SMTPSecure = 'ssl';
+	$deliveryreceipt->SMTPSecure = 'tls';
 
-	$deliveryreceipt->Host = 'mail.lcr-video.com';
-	$deliveryreceipt->Port = 465;
-	$deliveryreceipt->Username = 'noreply@lcr-video.com';
+	$deliveryreceipt->Host = 'smtp.gmail.com';
+	$deliveryreceipt->Port = 587;
+	$deliveryreceipt->Username = 'lcrvideo.contact@gmail.com';
 	$deliveryreceipt->Password = '*******';
 
-	$deliveryreceipt->From = "noreply@lcr-video.com";
+	$deliveryreceipt->From = "lcrvideo.contact@gmail.com";
 	$deliveryreceipt->FromName = $from_name = 'LCR Video';
-	$deliveryreceipt->Sender = $from = 'noreply@lcr-video.com';
+	$deliveryreceipt->Sender = $from = 'lcrvideo.contact@gmail.com';
 	$deliveryreceipt->AddAddress($email);
 
 	$deliveryreceipt->CharSet = "UTF-8";
